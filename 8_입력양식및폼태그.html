@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>입력양식 관련 태그</h1>
+    <h2>input 태그</h2>
+    <p>사용자에게 값을 입력받을 수 있는 텍스트상자 또는 체크박스 등등을 만들 수 있다.</p>
+
+    <form>
+    아이디 : <input type="text"> <br>
+    비밀번호 : <input type="password"> <br>
+    성별 : <input type="radio"> 남 <input type="radio"> 여<br>
+    <input type="submit" value="회원가입">
+    <!-- submit 제출에 해당하는 버튼-->
+    </form>
+
+    <hr>
+
+    <h1>폼 관련 태그</h1>
+    <p>
+        form 태그 내의 input 요소들에 사용자가 입력한 정보들을 <br>
+        서버로 넘기면서 요청하는 역할을 수행하는 태그이다. <br>
+
+        &lt;form action="" method=""> <br>
+
+        * action 속성 : 폼 내에 입력된 값들을 전달할 서버에 대한 경로 제시<br>
+        * method 속성 : 요청전송 방식을 지정하는 속성 (get(기본값)/post)
+        > get 방식 : 요청시 사용자가 입력한 값들이 url에 노출되는 방식
+        > post 방식 : 요청시 사용자가 입력한 값들이 url에 노출이 안되는 방식
+
+
+    </p>
+    <form action="test" method="post">
+        검색 내용 :
+        <input type="text" name="search">
+        <input type="submit" value="검색">
+
+    </form>
+    <p>
+        폼태그내의 제출 버튼 클릭시 <br>
+        method에 제시한 요청전송 방식으로<br>
+        action에 지정한 경로로 사용자가 입력한 값을 key=value세트로 전달
+
+    </p>
+    <hr>
+
+    <h3>fieldset : 폼 요소를 그룹으로 묶는 태그</h3>
+    <h3>legend : fieldset으로 묶은 그룹에 명칭을 붙이는 태그</h3>
+
+    <form action="test">
+        <fieldset>
+            <legend>제목1</legend>
+            입력1: <input type="text" name="text1"> <br>
+            입력1: <input type="text" name="text2"> <br>
+            
+        </fieldset>
+        <fieldset>
+            <legend>제목2</legend>
+            입력1: <input type="text" name="text3"> <br>
+            입력1: <input type="text" name="text4"> <br>
+        </fieldset>
+
+        <input type="submit">
+
+    </form>
+    <hr>
+    <h2>text와 관련된 input태그들</h2>
+    <form action="test">
+
+        <h3>type="text"</h3>
+        <p>-한줄 짜리 텍스트를 입력할 수 있는 텍스트 상자</p>
+
+        아이디 : <input type="text" name="userId" 
+                    placeholder="아이디를 입력하세요"
+                    maxlength="15" required>
+    
+    <input type="submit">
+    </form>
+</body>
+</html>
