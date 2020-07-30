@@ -8,6 +8,27 @@
         div{
             border:1px solid black;
         }
+        #div1{
+            background-color: red;
+        }
+        #div2{
+            background-color: yellow;
+        }
+        #div3{
+            background-color: green;
+        }
+        span{
+            border:1px solid black;
+        }
+        #span1{
+            background-color: red;
+        }
+        #span2{
+            background-color: yellow;
+        }
+        #span3{
+            background-color: green;
+        }
     </style>
 </head>
 <body>
@@ -22,16 +43,57 @@
                      (b, strong,s, mark, img,span)           
     -->
     <h2>div태그와 span태그의 차이1 : 줄바꿈 적용</h2>
-    <div>
+    <h3>> div 태그 : 블럭요소 (한줄 영역차이)</h3>
+    <div id="div1">
         첫번째 영역
     </div>
 
-    <div>
+    <div id="div2">
         두번째 영역
     </div>
 
-    <div>
+    <div id="div3">
         세번째 영역
     </div>
+    <h3>> span 태그 : 인라인요소 (content 영역차지)</h3>
+    <span id="span1">
+        첫번째 영역
+    </span>
+    <span id="span2">
+        두번째 영역
+    </span>
+    <span id="span3">
+        세번째 영역
+    </span>
+
+    <hr>
+
+    <h2>div 태그와 span태그의 차이2 : 영역 지정 방식</h2>
+    <h3>> div 태그 : 사각형 박스로 영역을 지정</h3>
+
+    <div style="background: paleturquoise;">
+        심장은 청춘은 안고, 철환하였는가? 이는 사랑의 용기가 투명하되 따뜻한 길지 보이는 같이, 것이다.<br>
+         같은 곳으로 안고, 들어 운다. 그것은 있는 우리는 피다. 영원히 싹이 천고에 부패뿐이다. <br>
+        속에서 인간이 것은 청춘의 때까지 꽃이 운다. 만물은 맺어, 심장의 것이다.<br>
+        보는 위하여 고동을 공자는 돋고, 인생에 청춘의 것이다. 풀이 품으며,... <Br>
+    </div>
+
+    <h3>span 태그 : 문장 단위로 영역을 지정</h3>
+    <span style="background-color:peachpuff;">
+    심장은 청춘은 안고, 철환하였는가? 이는 사랑의 용기가 투명하되 따뜻한 길지 보이는 같이, 것이다.<br>
+    같은 곳으로 안고, 들어 운다. 그것은 있는 우리는 피다. 영원히 싹이 천고에 부패뿐이다. <br>
+    속에서 인간이 것은 청춘의 때까지 꽃이 운다. 만물은 맺어, 심장의 것이다.<br>
+    보는 위하여 고동을 공자는 돋고, 인생에 청춘의 것이다. 풀이 품으며,...
+    </span>
+
+    <hr>
+
+    <!--iframe 태그 : 문서내에 다른 문서를 추가하는 태그-->
+
+    <h1>iframe 태그</h1>
+    <p>현재 이 문서내에 다른 웹페이지를 추가하는 태그(인라인요소)</p>
+    <iframe src="3_표관련태그.html"></iframe>
+    <iframe width="644" height="362" src="https://www.youtube.com/embed/4BMZRqlCzZs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </body>
 </html>
