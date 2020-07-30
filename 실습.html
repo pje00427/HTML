@@ -6,18 +6,11 @@
     <title>practice</title>
 
     <style>
-        thead{
+        #div1{
             background-color: paleturquoise;
         }
         
-      
-        #list2{
-            background-color: orange;
-        }
-
-        #list{
-            background-color: orangered;
-        }
+    
     </style>
 </head>
 <body>
@@ -40,27 +33,23 @@
     <!-- 7행 5열-->
 
     <table border="1">
-       <thead>
-           <tr>
-            <th colspan="6">하수정 보석 컬렉션</th>
-       
-         </tr>
-        </thead>
-
-        <tbody>
-            
-            
+      
+        <div id="div1">
+            <tr>
+                <th colspan="6">하수정 보석 컬렉션</th>
+            </tr>
+        </div>  
                     <td id= "list"rowspan="5">제품리스트</td>
-                    <div id="list2">
-                        <td style="background-color: red;">코드</td>
-                        <td style="background-color: red;">분류</td>
-                        <td style="background-color: red;">가격</td>
-                        <td style="background-color: red;">구매 가능 개수</td> 
-                    </div>
+                     <div class="list2">
+                        <td>코드</td>
+                        <td>분류</td>
+                        <td>가격</td>
+                        <td>구매 가능 개수</td> 
+                     </div>
                     
               
             
-            <div id="div1">
+            <div id="div2">
                 <tr style="background-color: orange;">
                     <td>01-468</td>
                     <td>가을</td>
@@ -97,7 +86,7 @@
           
 
 
-        </tbody>
+        
        
     </table>    
 </body>    
