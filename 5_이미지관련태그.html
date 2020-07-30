@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 관련 태그</title>
+</head>
+<body>
+    <h1>이미지 관련 태그</h1>
+    <!--
+        <img> : 웹 페이지에 사진이나 그림을 삽입할 때 사용하는 태그
+        <img src="삽입하고자 하는 이미지의 경로">
+    -->
+    <h3>src 속성</h3>
+    <img src="resources/image/river1.png">
+
+    <h3>alt 속성</h3>
+    <img src="resources/image/river1.png" alt="이 사진은 강 사진입니다.">
+    <p> - src 경로가 잘못되었거나, 오류가 있을 때 alt에 기재해놓은 설명문구가 뜬다(대체 텍스트)<br>
+        - 시각장애인들을 위한 스크린리더에서 이미지를 읽어주는 설명 문구로도 쓰인다 </p>
+    
+    <hr>
+
+    <h3>width와 heigt 속성</h3>
+    <p>
+        이미지의 가로, 세로길이 조정가능 <br>
+        고정길이 (px), 가변 길이(%)로 지정 가능
+    </p>
+
+    <h4>고정 크기 단위(px) : 화면사이즈가 조정이되도 이미지의 크기는 변동 없음</h4>
+    <img src="resources/image/flower1.PNG" alt="" width="200px" height="150px">
+    <img src="resources/image/flower2.PNG" alt=""width="200px" height="150px">
+    <img src="resources/image/flower3.PNG" alt=""width="200px" height="150px">
+    <br>
+
+    <h4>가변 크기 단위(%) : 화면사이즈 혹은 기준 사이즈에 따라 이미지 크기도 같이 변동</h4>
+    <img src="resources/image/flower1.png"alt="" width="15%" height="150px">
+    <img src="resources/image/flower2.png"alt="" width="15%" height="150px">
+    <img src="resources/image/flower3.png"alt="" width="15%" height="150px">
+</body>
+</html>
