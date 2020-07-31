@@ -80,10 +80,209 @@
         <h3>type="password"</h3>
         <p>-비밀번호를 입력할 수 있는 텍스트 상자이다.</p>
         비밀번호 : <input type="password" name="userPwd" 
-        placeholder="비밀번호를 입력하세요"
+        placeholder="영문자숫자 포함 8~15"
         maxlength="15" required>
-
+        <br>
     <input type="submit">
     </form>
+
+
+    <!-- 필기확인 하기 -->
+    <h3>type="search|url|email|tel"</h3>
+    <p>- 겉모습은 텍스트상자와 유사하지만 각각의 정보에 맞게 세분화된 기능을 제공하는 텍스트</p>
+
+    검색 : <input type="search" name="searchtext" placeholder="검색할 내용 입력">
+    <br>
+    홈페이지 : <input type="url" name="homepage" placeholder="http://">
+    <br>
+    이메일 : <input type="email" name="email"placeholder="이메일을 입력하세요">
+    <br>
+    전화번호 : <input type="tel" name="phone" placeholder="-포함전화번호입력">
+    <input type="submit">
+
+    <h3>HTML5에서 새로 추가된 datdlist</h3>
+    <form>
+    <!--HTML5 input type="text"에서 새로 추가된 기능-->
+    좋아하는 색상: <input type="text" name="color" list="myColor">
+    <datalist id="myColor">
+        <option value="black">검정색</option>
+        <option>흰색</option>
+        <option>빨간색</option>
+        <option>하늘색</option>
+    </datalist>
+
+    <br><br>
+    <input type="submit">
+
+    </form>
+
+
+    <h2>숫자와 관련된 input 태그들</h2>
+
+    <form action="test.do">
+        <h3>type="number"</h3>
+        <p>
+            숫자값만 작성가능한 텍스트 상자 <br>
+            브라우저에 따라 스핀박스가 표시됨 <br>
+            (스핀박스 : 입력창 오른쪽에 위/아래 화살표 버튼)
+        </p>
+
+        수량 : <input type="number" name="amount" min="0" max="100" value="10" step="5">
+        
+        <h3>type="range"</h3>
+        <p> - 슬라이드바를 통해 숫자 지정가능</p>
+        <input type="range" name="point" min="0" max="100" step="20"><br>
+
+        <input type="submit">
+        <input type="reset">
+        <br><Br>
+    </form>
+
+    <hr>
+
+    <h2>날짜 및 시간과 관련된 input 태그들</h2>
+
+    <form action="test.do">
+
+        <h2>type="date|month|week|time|datetime|datetime-local"</h2>
+
+        <label for="date1">date : </label>
+        <input type="date" name="dateIn" id="date1">
+        <!-- 포커스 맞출 때 label 사용. id가 꼭 있어야됨-->
+        <br>
+
+        <label>month :</label>
+        <input type="month" name="monthIn">
+        <br>
+        <label>week :</label>
+        <input type="week" name="weekIn">
+        <br>
+
+        <label>time : </label>
+        <input type="time" name="timeIn">
+        <br>
+
+        <label>datetime : </label>
+        <input type="datetime" name="dtIn">
+        <br>
+
+        <label>datetime-local : </label>
+        <input type="datetime=local" name="dtlIn">
+
+        <br><br>
+
+        <button type="submit">제출</button>
+
+    </form> <!---서브밋버튼은 폼태그 안에 있어야 한다-->
+
+    <hr>
+
+    <h2>체크박스와 라디오 버튼 관련 input 태그들</h2>
+
+    <form action="test.do">
+        <h3>라디오버튼 (type="radio")</h3>
+        <p>- 제시한 여러개의 값들 중에서 한개만 선택해야 할 때
+            (즉, 하나의 용도로 사용할 경우 name속성 값이 같아야만함</p><br>
+        <p>- 선택된 값(checked)만 넘어감</p>
+        <p>- 선택된 값을 넘기고자 한다면 선택했을 때의 어떤값을 넘길건지 value속성을 이용해서 명시해둬야됨</p>
+            <!--키값을 동일하게 작성해야 둘 중에 하나만 선택됨-->
+        성별 : 
+        <input id="radioX" type="radio" name="gender" value="X" checked>
+        <label for="radioX">선택안함</label>
+
+        <input id="radioM" type="radio" name="gender" value="M">
+        <label for="radioM">남</label>
+
+        <input id="radioF"type="radio" name="gender" value="F"> 
+        <label for="radioF">여</label>
+        <br><br>
+
+        <h3>체크박스 (type="checkbox")</h3>
+        <p>- 제시한 여러개의 값들 중에서 여러개 선택가능 할 경우</p>
+
+        취미 : 
+        <input id="baseball" type="checkbox" name="hobby" value="baseball">
+        <label for="baseball">야구</label>
+
+        <input id="basketball" type="checkbox" name="hobby" value="basketball">
+        <label for="basketball">농구</label>
+
+        <input id="football"type="checkbox" name="hobby" value="football">
+        <label for="basketball">축구</label>
+            
+        <br><br>
+        <input type="submit">
+
+
+        <br>
+    </form>
+
+    <hr>
+
+    <h2>추가적인 input 태그들</h2>
+    <form action="test.do">
+        <h3>type="color"</h3>
+        색상선택 : <input type="color" name="color">
+        <br>
+        <br><br>
+
+        <h3>type="file"</h3>
+        첨부파일 : <input type="file" name="uploadFile">
+        <br>
+
+        <h3>type="hidden"</h3>
+        안보임 : <input type="hidden" name="hiddenValue" value="강보람">
+        <!-- 특정값을 화면에 노출시키지 않고 넘기고 싶을 경우-->
+        <br><Br>
+
+        <h3>type="submit|reset|button"</h3>
+
+        <input type="submit" value="전송">
+        <input type="reset" value="취소">
+        <input type="button" value="일반버튼">
+        <br>
+
+        <h3>button [type="submit"|reset|button"]</h3>
+        <button>전송</button> <!--form 태그 내의 button태그의 type 명시하지않으면 기본값이 submit임-->
+        <button type="submit">전송</button>
+        <button type="reset">취소</button>
+        <button type="button">일반버튼</button>
+    </form>
+        <!--- 폼태그 밖에 버튼이 있다면 상관없음 제출안되기 때문-->
+
+        <hr>
+
+        <h2>select 태그와 option 태그</h2>
+        <p>- 사용자에게 직접 입력받는건 아니고 여러 옵션들 중에서 선택 할 수 있게끔</p>
+        <p>- 값 전달시 selected된 값만 넘어감</p>
+        <form action="test.do">
+
+            국적 : 
+            <select name="national">
+                <option value="ko">한국</option>
+                <option value="ch">중국</option>
+                <option value="jp">일본</option>
+                <option value="eu">영국</option>
+                <option selected>기타</option>
+            </select>
+
+            <input type="submit">
+
+        </form>
+        <hr>
+
+
+        <h2>textarea 태그</h2>
+        <p>- 텍스트를 입력받는 상자긴 하지만 여러줄을 입력할 수 있다.</p>
+
+        <form action="test.do">
+            <!--필기확인-->
+            <textarea name="longText" cols="50" rows="5" style="resize:40;"></textarea>
+            <br>
+            <input type="submit">
+
+        </form>
+
+<br><Br><br>
 </body>
 </html>
