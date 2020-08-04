@@ -27,22 +27,23 @@
         </fieldset>
         <fieldset>
             <legend>
-                피자사이즈
+                토핑 선택
             </legend>
-            <input id="radioX" type="radio" name="toping" value="bacon" checked>
-            <label for="radioX">베이컨</label><br><br>
-            <input id="radioX" type="radio" name="toping" value="cheese" checked>
-            <label for="radioX">치즈</label><br><br>
-            <input id="radioX" type="radio" name="toping" value="onion" checked>
-            <label for="radioX">양파</label><br><Br>
-            <input id="radioX" type="radio" name="toping" value="mushroom" checked>
-            <label for="radioX">버섯</label>
+            <input id="notopping" type="checkbox" name="notopping" value="notopping" checked>
+            선택안함
+            <input id="bacon" type="checkbox" name="topping" value="bacon">
+            <label for="bacon">베이컨</label>
+            
+            <input id="cheese" type="checkbox" name="topping" value="cheese">
+            <label for="cheese">치즈</label>
         </fieldset>
         <br>
 
-        <label>희망 배송 시간 : </label>
+        희망 배송 시간 : 
         <input type="time" name="timeIn">
         <br>
+        배송 시 요청사항 : <textarea row=5></textarea><br><br>
+        <input type="submit" value="주문하기">
     </form>
 </body>
 </html>

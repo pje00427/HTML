@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표태그2</title>
+    <style>
+
+    caption{
+        color: red;
+        font-size: 1.5em;
+    }
+    thead{
+        background-color: pink;
+        color: whitesmoke;
+    }
+    .button{
+        background-color: powderblue;
+        color:white
+    }
+    tbody{
+        background-color: yellow;
+    }
+    tfoot{
+        background-color: red;
+        color: blue;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <table border="2">
+        <caption><b>kh 정보교육원 강의</b></caption>
+        <thead>
+            <tr>
+                <th>관</th>
+                <th>강의장</th>
+                <th>인원수</th>
+                <th>강의명</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="6">1관</td>
+                <td rowspan="2">I강의장</td>
+                <td rowspan="2">30명</td>
+                <td>오전 : 강보람 <button class="button">신청하기</button></td>
+            </tr>
+            <tr> 
+                <td>오후 : 강보람 <button class="button">신청하기</button></td>
+               
+            </tr>
+            <tr>
+                <td rowspan="2">G강의장</td>
+                <td rowspan="2">23명</td>
+                <td>오전 : 박신우 <button class="button">신청하기</button></td>
+                
+            </tr>
+            <tr>
+                
+                <td>오전 : 박신우 <button class="button">신청하기</button></td>
+               
+            </tr>
+            <tr>
+                <td rowspan="2">H강의장</td>
+                <td rowspan="2">27명</td>
+                <td>오전 : 유승제 <button class="button">신청하기</button></td>
+                
+            </tr>
+            <tr>
+                
+                <td>오전 : 유승제 <button class="button">신청하기</button></td>
+                
+            </tr>
+
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4" ><b>많이신청해주세요</b></td>
+                
+            </tr>
+        </tfoot>
+
+    </table>
+    
+</body>
+</html>
