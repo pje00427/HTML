@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css 기본선택자</title>
+    <style>
+        /* CSS 주석 입니다 */
+        /* css영역 */
+        /* * : 모든 요소 선택자 */
+        *{
+            /* color:red; */
+        }
+        /* 태그명 : 태그 선택자 */
+       
+        p,pre{
+            /* color:red; */
+        }
+
+        #id2{
+            background-color:yellow;
+            color:green;
+        }
+
+        #id3{
+            background-color:yellowgreen;
+            color: pink;
+        }
+        .class1{
+            background-color: gray;
+            color: purple;
+        }
+        .class2{
+            color: orangered;
+        }
+        .test{
+            font-size: 15px;
+        }
+
+    </style>
+    <!-- 내부 스타일 방식 : 현재 이 문서에 적용시키고자 하는 스타일들을
+        <style>태그에 기입하는 방법-->
+</head>
+<body>
+    <h1 style="color: teal;"> CSS 기본 선택자</h1>
+    <!--인라인 스타일 방식 : 해당 요소내에 직접적으로 바로 기입하는 방식-->
+    <p>
+        <b>선택자란 ?</b><br>
+        특정 HTML요소를 선택하고자 할 때 사용하는 기능<br>
+        해당 요소를 선택해서 원하는 스타일과 기능을 적용시킬 수 있음
+    </p>
+
+    <h2>1.모든 선택자 (*)</h2>
+    <p>해당 이 문서상의 모든 요소들을 선택할 때 사용</p>
+    <pre>
+        * {
+            스타일속성:값;
+            스타일속성:값;
+        }
+    </pre>
+    <hr>
+
+    <h2>2. 태그 선택자(태그명)</h2>
+    <p>해당 이문서내에 해당 같은 태그들 모두 선택할 때 사용</p>
+    <pre>
+        태그명{
+            스타일속성:값;
+            스타일속성:값;
+
+        }
+    </pre>
+    <hr>
+    <!-- 모든 html 태그에 공통적으로 쓸수 있는 속성 :id,class-->
+    <h2>3.아이디 선택자 (#아이디명)</h2>
+    <p>해당 이 문서내에 특정 HTML 요소 하나만을 선택하고자 할 때</p>
+    <pre>
+        #아이디명{
+            스타일속성:값;
+            스타일속성:값;
+        }
+
+    </pre>
+    <ol>
+        <li>아이디선택자테스트1</li>
+        <li id="id2">아이디선택자테스트2</li>
+        <li id="id3">아이디선택자테스트3</li>
+        <li>아이디선택자테스트4</li>
+    </ol>
+
+    <hr>
+
+    <h2>4. 클래스 선택자 (.클래스명)</h2>
+    <p>해당 이 문서내에 내가 원하는 여러개의 요소를 선택하고자 할 때 사용</p>
+
+    <pre>
+        .클래스명{
+            스타일속성:값;
+        }
+    </pre>
+    <ul>
+        <li class="class1">클래스선택자테스트1</li>
+        <li class="class2 test">클래스선택자테스트2</li>
+        <li class="class1">클래스선택자테스트3</li>
+        <li class="class2">클래스선택자테스트4</li>
+        <li class="class1">클래스선택자테스트5</li>
+    </ul>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    
+
+</body>
+</html>

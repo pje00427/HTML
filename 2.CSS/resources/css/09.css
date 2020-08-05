@@ -1,0 +1,32 @@
+.size-test{
+    border:2px solid red;
+}
+#test1{
+    width:800px;
+    height:200px;
+}
+#test2{
+    width:50%;
+    height:200px;
+}
+.block{
+    border:1px solid black;
+ width:150px;
+ height:150px;
+}
+
+.area1{background: red;}
+.area2{background: orange;}
+.area3{background: yellow;}
+.area4{background: green;}
+.area5{background: blue;}
+
+.block-test1{
+    display:inline;
+}
+.block-test2{
+    display:inline-block;
+}
+.block-test3{
+    display:block;
+}

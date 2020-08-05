@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타 선택자</title>
+    <link rel="stylesheet" href="resources/css/02.css">
+    <!--외부 스타일 방식 : 스타일 정보만을 따로 관리하는 .css외부 문서를 만들고 
+                            link를 통해 연결시켜주는 방법-->
+</head>
+<body>
+    
+    <h2>1. 속성 선택자</h2>
+    <p>선택자 뒤에[]를 사용해서 속성과 어떤 속성값을 사용하는 방식</p>
+    <pre>
+        선택자[속성=|~=||=|^=|$=|*=속성값]{
+            스타일 속성:값
+        } 
+    </pre>
+
+    <div class="div-class" name="name1">div1</div>
+    <div class="div-class" name="name2">div2</div>
+    <div class="div-class" name="name3 name1">div3</div>
+    <div class="class-Div" name="name3">div4</div>
+    <hr>
+
+    <h2>2. 자손 선택자와 후손 선택자</h2>
+    <p>자손 : 바로하위요소들 / 후손: 하위요소들 전부</p>
+    <pre>
+        * 자손선택자
+        a>b{
+            스타일속성:값
+        }
+        * 후손선택자
+        a b{
+            스타일 속성:값
+        }
+    </pre>
+
+    <div id="test1">
+        <h4>자손입니다.</h4>
+        <h4>나도 자손입니다.</h4>
+        <ul>나도 자손입니다.
+            <li>div의후손이면서 ul의 자손입니다.</li>
+            <li>div의후손이면서 ul의 자손입니다.</li>
+            
+        </ul>
+    </div>
+    <hr>
+
+    <h2>3. 동위 선택자</h2>
+    <p>동위 관계(같은레벨)에 있는 뒤에 위치한 특정 요소를 선택할 때 사용</p>
+    <pre>
+        * a요소 뒤에 있는 b요소 하나만을 선택
+        a+b{
+            스타일속성:값;
+        }
+        a~b{
+            스타일속성:값;
+        }
+    </pre>
+    <div id="div-test">div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div><br>
+
+    <h2>4. 반응 선택자</h2>
+    <p>사용자의 움직임에 따라 달라지는 선택자</p>
+    <pre>
+        * 사용자가 해당 요소를 클릭했을 때 선택
+        선택자:active{
+            스타일속성: 값;
+        }
+        * 사용자가 해당 요소에 마우스를 올려다놨을 때 선택
+        선택자:hover{
+
+        }
+    </pre>
+    <div id="active-test">active테스트</div><br>
+    <div id="hover-test">hover테스트</div><br>
+
+    <a href="">sdf</a>
+    <!-- a태그같은 경우 hover시 커서모양 pointer로 되게끔 기본적으로 내재되어있음 -->
+    <br><br><br>
+    <hr>
+
+    <h2>5. 상태선택자</h2>
+    <p>입력양식의 상태에 따라 선택되는 선택자</p>
+    <pre>
+        1) 체크된 상태의 태그
+        선택지:checked{
+            스타일속성:값;
+        }
+    </pre>
+    <input type="checkbox" name="fruit" value="apple">
+    <label>사과</label>
+    <input type="checkbox" name="fruit" value="banana">
+    <label>바나나</label>
+    <input type="checkbox" name="fruit" value="kiwi">
+    <label>키위</label>
+    <br><br>
+
+    <pre>
+        2) 초점이 맞춰진 input요소 선택
+        선택자:focus{
+            스타일속성:값;
+        }
+    </pre>
+
+    아이디 :
+    <input type="text" name="userId" placeholder="아이디입력" maxlength="15" required>
+    <br>
+    비밀번호 :
+    <input type="password" name="userPwd" placeholder="비밀번호입력">
+    <br>
+    검색 :
+    <input type="search" name="search">
+    <br><br>
+
+    <pre>
+        3) 사용 가능한 요소 선택
+        선택자:enabled{
+            스타일속성:값;
+        }
+        4) 사용 불가능한 요소 선택
+        선택자:disabled{
+            스타일속성:값;
+        }
+    </pre>
+
+    <h3>상품선택 : </h3>
+    <select name="product">
+        <option value="">선택안함</option>
+        <option value="" disabled>카키 S [품절]</option>
+        <option value="">카키 M</option>
+        <option value="">카키 L</option>
+    </select>
+    <br><br><br>
+    <button>클릭가능</button>
+    <button disabled>클릭불가능</button>
+
+    
+
+
+</body>
+</html>

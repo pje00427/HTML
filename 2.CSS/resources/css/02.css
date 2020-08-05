@@ -1,0 +1,113 @@
+/* css 영역 (스타일 정보를 기술할 수 있는 영역) */
+/* div중 name속성값이 name1과 일치하는 태그 */
+div[name=name1]{
+    background-color: orangered;
+}
+/* div중 name속성값에 name1이 포함되어있는 태그 */
+div[name~=name1]{
+    background-color: powderblue;
+}
+/* div중 class속성값이 class로 시작되는 태그(-로구분) */
+div[class|=class]{
+    background-color: cyan;
+}
+/* div중 name속성값이 na로 시작되는 태그 */
+div[name^=na]{
+    background-color: blue;
+}
+/* div중 class속성값이 class로 끝나는 태그 */
+div[class$=class]{
+    color: white;
+}
+/* div중 class속성값에 i가 포함되어 있는 태그 */
+div[class*=i]{
+    background-color: yellowgreen;
+    color: whitesmoke;
+}
+/* 응용 */
+/* class 속성값이 div-class인 애들 중 name속성값에 name3가 포함되어있는 태그 */
+.div-class[name~=name3]{
+    background-color: pink;
+}
+/* ---------------------------------------------- */
+/*자손 선택자와 후손 선택자*/
+
+/* a>b : a요소의 자손들 중에서 b요소들만 선택 */
+#test1>h4{
+    background-color: wheat;
+}
+
+#test1>ul>li{
+    background-color: teal;
+}
+/* a,b : a요소의 후손(모든 하위요소)들 중에 b요소만을 선택 */
+#test1 li{
+    color:yellowgreen;
+}
+#div-test{
+    background-color:red;
+}
+/* 동위 선택자 */
+
+#div-test+div{
+    background-color:yellow
+}
+#div-test~div{
+    /* background-color:green;
+    color: honeydew; */
+}
+
+#active-test, #hover-test{
+    background-color:yellowgreen;
+    /*block요소에 지정할 수 있는 스타일속성:width,height*/
+    width:200px;
+    height:200px;
+}
+/* 반응선택자 */
+#active-test:active{
+    background-color: yellow;
+    color:red;
+}
+
+#hover-test:hover{
+    background-color: cyan;
+    color:red;
+    cursor:pointer;
+}
+
+/* ---상태 선택자--- */
+
+input[type=checkbox]:checked{
+    width:20px;
+    height:20px;
+    /* 해당 input요소에 스타일이부여 됨 */
+}
+input[type=checkbox]:checked+label{
+    font-size:20px;
+    /* 해당 이 스타일은 checked가 된 input요소 바로 뒤의 label요소에 부여됨 */
+}
+
+input[type=text]:focus{
+    background-color:green;
+}
+input[name=userPwd]:focus{
+    background-color: indianred;
+}
+input:focus{
+    background-color: khaki;
+}
+
+option:enabled{
+    background-color: yellowgreen;
+}
+option:disabled{
+    background-color: thistle;
+}
+button:enabled{
+    background-color: blue;
+}
+button:disabled{
+    background-color: red;
+}
+
+
